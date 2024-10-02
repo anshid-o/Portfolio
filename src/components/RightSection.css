@@ -69,16 +69,38 @@
     border: 2px solid #ffc107; /* Change border to gold on hover */
   }
   
-  /* Responsive design for smaller screens */
+  /* Responsive design for smaller screens (Phones and Tablets) */
   @media (max-width: 768px) {
     .right-section {
       flex-direction: column;
       height: auto;
     }
   
+    .summary-section {
+      margin-bottom: 15px;
+    }
+  
     .skills-section-sum, .personal-details-section {
-      width: 100%;
-      margin-bottom: 20px;
+      width: 100%; /* Take full width for better responsiveness */
+      margin-bottom: 20px; /* Add margin between sections */
+    }
+  
+    .skills-section-sum h4, .personal-details-section h4 {
+      font-size: 18px; /* Larger heading for better visibility */
+    }
+  
+    .skills-section-sum p, .personal-details-section p {
+      font-size: 14px; /* Keep text legible on smaller screens */
+    }
+  
+    .bottom-section {
+      flex-direction: column; /* Stack the sections vertically on mobile */
+      gap: 10px;
+    }
+  
+    .bottom-section .skills-section-sum,
+    .bottom-section .personal-details-section {
+      width: 100%; /* Full width on mobile */
     }
   }
   

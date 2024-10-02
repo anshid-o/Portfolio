@@ -6,8 +6,8 @@ import StartupExperience from './components/StartupExperience';
 import Internships from './components/Internships';
 import SoftSkills from './components/SoftSkills';
 import Volunteering from './components/Volunteering';
-import RightSection from './components/RightSection';
 import './App.css';
+import RightSection from './components/RightSection';
 
 function App() {
   return (
@@ -15,30 +15,13 @@ function App() {
       <Sidebar />
       <div className="content-container">
         <RightSection />
-
-        <div id="summary">
-          <StartupExperience />
-        </div>
-
-        <div id="education">
-          <Education />
-        </div>
-
-        <div id="internships">
-          <Internships />
-        </div>
-
-        <div id="projects">
-          <Projects />
-        </div>
-
-        <div id="softskills">
-          <SoftSkills />
-        </div>
-
-        <div id="volunteering">
-          <Volunteering />
-        </div>
+        
+        <StartupExperience />
+        <Education />
+        <Internships />
+        <Projects />
+        <SoftSkills />
+        <Volunteering />
       </div>
     </div>
   );

@@ -1,5 +1,6 @@
 .app-container {
   display: flex;
+  flex-direction: row; /* Default for desktop view */
 }
 
 .content-container {
@@ -9,29 +10,27 @@
   color: #fff;
   height: 100vh;
   overflow-y: scroll;
+  flex-direction: column;
+  display: flex;
 }
 
-h1 {
-  margin-bottom: 20px;
-  color: #ffc107;
+/* Styles for Right Section */
+.right-section {
+  flex-direction: column;
 }
+
+/* For individual sections like summary, tech skills, personal details, etc. */
 .section {
-  
-  
   margin-bottom: 10px;
   margin-top: 10px;
 }
-.cards{
+
+/* Cards layout */
+.cards {
   width: 100%;
   margin-top: 2%;
   display: flex;
   flex-wrap: wrap;
-}
-
-.card .company-name {
-  font-weight: bold;
-  font-size: 1.1rem; /* Increase the font size of company name */
-  color: black; /* Set the color to black */
 }
 
 .card {
@@ -43,13 +42,13 @@ h1 {
   margin-bottom: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  box-sizing: border-box; /* Includes padding and border in the width */
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition for transform and shadow */
+  box-sizing: border-box;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .card:hover {
   transform: scale(1.06) rotate(-1.75deg); /* Slight zoom and small rotation */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Increased shadow on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 }
 
 .card h3 {
@@ -67,28 +66,93 @@ h1 {
   margin-top: 10px;
 }
 
-
-/* Add this at the bottom of your App.css or global CSS file */
+/* Custom Scrollbar */
 ::-webkit-scrollbar {
-  width: 10px; /* Adjust width for vertical scrollbar */
-  height: 10px; /* Adjust height for horizontal scrollbar */
+  width: 10px;
+  height: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #ffc107; /* Yellow color for the thumb */
-  border-radius: 10px; /* Rounded corners for the thumb */
-  border: 2px solid #333; /* Dark border around the thumb */
+  background-color: #ffc107;
+  border-radius: 10px;
+  border: 2px solid #333;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #ffb300; /* Lighter yellow when hovering */
+  background-color: #ffb300;
 }
 
 ::-webkit-scrollbar-track {
-  background-color: #333; /* Dark background for the scrollbar track */
-  border-radius: 10px; /* Rounded corners for the track */
+  background-color: #333;
+  border-radius: 10px;
 }
 
 ::-webkit-scrollbar-corner {
-  background-color: #333; /* Matching color for the scrollbar corner */
+  background-color: #333;
+}
+
+/* Default style for the card (desktop/tablet) */
+.responsive-card {
+  width: 30%;
+}
+
+/* Responsive design for smaller screens (phones) */
+@media (max-width: 768px) {
+  .responsive-card {
+    width: 100%; /* Make the card take up full width on mobile */
+  }
+}
+
+/* Responsive Design for Smaller Screens (Mobile-first approach) */
+@media (max-width: 768px) {
+  .app-container {
+    flex-direction: column; /* Stack sidebar and content vertically */
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    order: 1; /* Sidebar will come first */
+  }
+
+  .content-container {
+    width: 100%;
+    order: 2; /* Content will come after sidebar */
+    padding: 10px;
+  }
+
+  .right-section {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .cards {
+    display: block;
+  }
+
+  .card {
+    width: 100%; /* Make cards take full width on mobile */
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+
+  .frameworks-section,
+  .skills-section {
+    width: 100%; /* Ensure skills and frameworks sections take full width */
+  }
+  
+  .profile-img {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 15px;
+  }
+
+  .cv-btn {
+    width: 100%;
+    margin-top: 20px;
+  }
 }

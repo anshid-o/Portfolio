@@ -6,7 +6,8 @@ const StartupExperience = () => {
     <div className="section">
       <h2>In-House Startup Experience</h2>
       <div className="cards">
-        <div className="card" style={{width:'30%'}}>
+      <div className="card responsive-card">
+      
           <h3>Homate</h3>
           <p><strong>Role:</strong> Software Developer</p>
           <p><strong>Location:</strong> CITTIC TBI, Cochin University of Science and Technology</p>
@@ -17,7 +18,10 @@ const StartupExperience = () => {
                           Leading the development of a mobile application using Flutter and Firebase for Android and iOS, focusing on eliminating brokerage issues and providing home-related services.\n
                           Managing project timelines, coordinating with team members, and ensuring the successful execution of the startup’s vision.`}
           />
-        </div>
+  {/* Your content */}
+</div>
+
+        
         {/* Add more startup experiences if needed */}
       </div>
     </div>
