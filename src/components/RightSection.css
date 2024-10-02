@@ -1,0 +1,84 @@
+.right-section {
+    width: 100%;
+    height: 42vh; /* 35% height of the viewport */
+    position: relative;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .summary-section {
+    width: 100%; /* Full width for the summary */
+    margin-bottom: 20px;
+  }
+  
+  .summary-section h3 {
+    margin-bottom: 10px;
+    color: #ffc107;
+  }
+  
+  .summary-section p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 5px 0;
+  }
+  
+  .bottom-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .skills-section-sum, .personal-details-section {
+    width: 48%; /* Both sections take up 48% of the width */
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #555; /* Border similar to sidebar */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition on hover */
+  }
+  
+  .skills-section-sum h4, .personal-details-section h4 {
+    margin-bottom: 10px;
+    color: #ffc107;
+  }
+  
+  .skills-section-sum p, .personal-details-section p {
+    margin: 5px 0;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  
+  .skills-section-sum p {
+    color: #ccc;
+  }
+  
+  .personal-details-section p {
+    color: #ccc;
+  }
+  
+  /* Hover effect for skills and personal details */
+  .skills-section-sum:hover, .personal-details-section:hover {
+    transform: scale(1.025); /* Slight zoom on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* Deeper shadow on hover */
+    border: 2px solid #ffc107; /* Change border to gold on hover */
+  }
+  
+  /* Responsive design for smaller screens */
+  @media (max-width: 768px) {
+    .right-section {
+      flex-direction: column;
+      height: auto;
+    }
+  
+    .skills-section-sum, .personal-details-section {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+  
