@@ -1,3 +1,4 @@
+/* Sidebar styles */
 .sidebar {
   width: 20%; /* Set the sidebar width to 20% */
   background-color: #333;
@@ -8,8 +9,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 100vh; /* Full height for scrollable content */
+  position: fixed; /* Fixed positioning on the side */
+  overflow-y: auto; /* Enable vertical scrolling */
+  top: 0;
+  left: 0;
 }
 
+/* Styling the profile section */
 .profile-section {
   text-align: center;
 }
@@ -29,8 +36,7 @@
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Enhanced shadow */
 }
 
-
-
+/* Framework section */
 .frameworks-section {
   width: 100%; /* Make sure frameworks section fits within the sidebar */
 }
@@ -50,6 +56,7 @@
 .framework {
   text-align: center;
 }
+
 .framework-img {
   width: 50px;
   height: 50px;
@@ -61,13 +68,13 @@
   transform: scale(1.2); /* Slight zoom */
 }
 
-
 .framework p {
   margin-top: 10px;
   color: #ccc;
   font-size: 14px;
 }
 
+/* Skills section */
 .skills-section {
   margin-top: 10px;
   width: 100%; /* Ensure skills section fits inside the sidebar */
@@ -85,6 +92,7 @@
   color: #ccc;
 }
 
+/* Social icons */
 .social-icons {
   margin-top: 20px;
   display: flex;
@@ -101,6 +109,7 @@
   color: white;
 }
 
+/* CV Button */
 .btn-warning {
   margin-top: 20px;
   width: 100%;
@@ -121,4 +130,35 @@
 
 .cv-btn:hover {
   background-color: #e0a800;
+}
+
+
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  
+  .sidebar {
+    width: 100%; /* Full width for mobile devices */
+    height: auto; /* Sidebar height will adjust to content */
+    position: relative; /* No fixed position on mobile */
+    box-shadow: none; /* Remove shadow for mobile */
+  }
+
+  /* Make sure profile image scales down on mobile */
+  .profile-img {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 10px;
+  }
+
+  /* Framework and skills sections should also take full width */
+  .frameworks-section, .skills-section {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  /* Adjust hover effects for mobile */
+  .framework-img:hover {
+    transform: scale(1.1); /* Slight zoom */
+  }
 }
